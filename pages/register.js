@@ -1,4 +1,4 @@
-import { View, Text, Image, TextInput, TouchableOpacity } from 'react-native'
+import { View, Text, Image, TextInput, ScrollView,TouchableOpacity } from 'react-native'
 import React from 'react'
 import tw from 'tailwind-react-native-classnames'
 import RoundedButton from '../components/button/RoundedButton'
@@ -6,15 +6,15 @@ import RoundedButton from '../components/button/RoundedButton'
 const Register = ({navigation}) => {
   return (
     <View>
-      <Image style={tw`mx-auto my-8`} source={require('../images/Logo/ANNILogo.png')}/>
+      <Image style={tw`mx-auto my-8 h-14 w-14`} resizeMode='contain' source={require('../images/Logo/Buk.jpg')}/>
       <View style={tw`mx-10`}>
          <Text style={tw`text-base font-bold`}>Register</Text>
           <Text>Input details to register</Text>
       </View>
        
-        <View style={tw`mt-3 mx-7 py-4 bg-white shadow-sm rounded-3xl px-5`}>
+        <ScrollView style={tw`mt-3 mx-7 py-4 bg-white shadow-sm rounded-3xl px-5`}>
           
-          <View>
+          <View style={tw`my-0.5`}>
             <View style={tw`flex-row justify-between`}>
               <View style={tw`my-1 w-5/12 border-b`}>
                 <Text>First Name</Text>
@@ -45,7 +45,7 @@ const Register = ({navigation}) => {
               </View>
           </View>
 
-          <View style={tw`flex-row justify-between`}>
+          <View style={tw`flex-row justify-between my-0.5`}>
               <View style={tw`my-1 w-5/12 border-b`}>
                 <Text>Phone Number</Text>
                 <TextInput
@@ -61,7 +61,7 @@ const Register = ({navigation}) => {
               </View>
             </View>
 
-            <View style={tw`flex-row justify-between`}>
+            <View style={tw`flex-row my-0.5 justify-between`}>
               <View style={tw`my-1 w-5/12 border-b`}>
                 <Text>Department</Text>
                 <TextInput
@@ -75,18 +75,19 @@ const Register = ({navigation}) => {
                 />
               </View>
             </View>
-
-          <RoundedButton 
-            text='Register'
-            pressed={()=>navigation.navigate('accountCreated')}/>
+          <View style={tw`w-10/12 mx-auto mt-3`}>
+            <RoundedButton 
+              text='Register'
+              pressed={()=>navigation.navigate('accountCreated')}/>
+          </View>
           {/* <Text>Forgot Password?</Text> */}
           <View style={tw`flex-row mx-auto py-2`}>
               <Text>Already have an Account?</Text>
               <TouchableOpacity onPress={()=>navigation.navigate('login')}>
-                <Text style={tw`text-green-800 font-bold`}> Login</Text>
+                <Text style={[tw`font-bold`,{color:'#0092ED'}]}> Login</Text>
               </TouchableOpacity>
           </View>
-      </View>
+      </ScrollView>
     </View>
   )
 }

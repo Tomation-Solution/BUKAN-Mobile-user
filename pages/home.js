@@ -24,7 +24,7 @@ const Home = ({navigation}) => {
             <Image style={tw`h-32 w-full rounded-lg`} source={require('../images/onboarding/network.png')}/>
           </View>
 
-          <Text style={tw`text-base font-bold my-2`}> Feeds </Text>
+          <Text style={tw`text-base font-bold my-2 mt-4`}> Feeds </Text>
           <View style={tw`flex-row justify-between px-5`}>
             <Pressable onPress={()=>navigation.navigate('events')}>
               <MaterialIcon name='event-available' style={tw`text-center pb-2`} color='#C4C4C4' size={35}/>
@@ -35,13 +35,13 @@ const Home = ({navigation}) => {
               <Text style={tw`text-xs`}>Gallery</Text>
             </Pressable>
 
-            <Pressable onPress={()=>navigation.navigate('news')}>
+            <Pressable onPress={()=>navigation.navigate('publication')}>
               <Ionicon name='book' style={tw`text-center pb-2`} color='#C4C4C4' size={30}/>
               <Text style={tw`text-xs`}>Publications</Text>
             </Pressable>
           </View>
 
-          <View style={tw`flex-row my-3 bg-green-800 justify-between p-2 rounded-lg`}>
+          <View style={[tw`flex-row my-3 justify-between p-2 rounded-lg mt-8`,{backgroundColor:'#0092ED'}]}>
             <Text style={tw`font-bold text-white`}>News</Text>
             <Text style={tw`text-xs text-white`}>See All (500)</Text>
           </View>
@@ -53,7 +53,7 @@ const Home = ({navigation}) => {
 
   return (
     <SafeAreaView style={tw`mx-3`}>
-      <StatusBar backgroundColor={'#365C2A'} showHideTransition='slide'/>
+      <StatusBar backgroundColor={'#0092ED'} showHideTransition='slide'/>
       {/* <Text>home</Text> */}
       <TobBar
         body={
@@ -63,12 +63,12 @@ const Home = ({navigation}) => {
             <Pressable onPress={()=>navigation.navigate('profile')}>
               <Image style={tw`h-8 w-8 rounded-full`} source={require('../images/onboarding/phone.png')}/>
             </Pressable>
-            <Ionicon name='notifications' onPress={()=>navigation.navigate('notifications')} size={28} color='#365C2A'/>
+            <Ionicon name='notifications' onPress={()=>navigation.navigate('notifications')} size={28} color='#0092ED'/>
           </View>
         }
       />
       {/* <ScrollView> */}
-      <View style={tw`flex-row bg-green-100 my-3 rounded-lg py-2  px-2`}> 
+      <View style={tw`flex-row bg-blue-100 my-3 rounded-lg py-2  px-2`}> 
         <Ionicon name='ios-search' size={25} style={tw`mr-2`} />
         <TextInput
           placeholder='Search'

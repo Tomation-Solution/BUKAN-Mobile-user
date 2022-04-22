@@ -24,7 +24,7 @@ const logout=()=>{
     
             <View style={tw`m-auto bg-white rounded-xl w-8/12`}>
                 <View style={tw`border-b border-green-300 my-3 mx-5`}>
-                    <Text style={tw`font-bold text-lg text-center text-green-500`}>Confirm Logout</Text>
+                    <Text style={[tw`font-bold text-lg text-center`, {color:'#0092ED'}]}>Confirm Logout</Text>
                 </View>
                 <Text style={tw`px-5 text-center py-3 text-gray-700`}>Kindly confirm you wish to logout of the application</Text>
                 <View style={tw`px-5 flex-row mb-4 justify-around `}>

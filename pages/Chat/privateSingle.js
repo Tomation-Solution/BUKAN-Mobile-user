@@ -31,7 +31,7 @@ const PrivateSingle = ({navigation}) => {
           </View>
         }
       />
-      <KeyboardAvoidingView behavior='position' style={tw`flex bg-green-100 absolute top-5 left-0 right-0 rounded-lg mx-3 h-5/6 mt-20 justify-start `}>
+      <KeyboardAvoidingView behavior='position' style={tw`flex bg-blue-100 absolute top-5 left-0 right-0 rounded-lg mx-3 h-5/6 mt-20 justify-start `}>
       
         <FlatList
             data={data}

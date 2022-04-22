@@ -19,10 +19,11 @@ const handlePress=(props)=>{
 
 const DrawerButton =(props)=>{
     return(
-        <DrawerItem activeTintColor='#365C2A'
+        <DrawerItem activeTintColor='#0092ED'
             key={props.id}
             style={tw`${props.bg}`}
                 label={props.label}
+                labelStyle={{color:props.id==props.selected ? '#0092ED':'rgba(0,0,0,0.4)'}}
                 onPress={() => handlePress(props)}
                 icon={({ focused, color, size }) => (props.icon) }
             />
@@ -51,10 +52,10 @@ export default function CustomDrawerList({navigation}) {
     const drawerData2 =[
         {id:5, label:'Gallery', to:'gallery', icon:<FontAwesome name="photo" size={22} color={'grey'}
         /> },
-        {id:6, label:'Election', to:'election', icon:<MaterialIcon name="how-to-vote" size={22} color={'grey'}
-        />},
-        {id:7, label:'Subscribe', to:'subscribe', icon:<MaterialIcon name="subscriptions" size={22} color={'grey'}
-        />},
+        // {id:6, label:'Election', to:'election', icon:<MaterialIcon name="how-to-vote" size={22} color={'grey'}
+        // />},
+        // {id:7, label:'Subscribe', to:'subscribe', icon:<MaterialIcon name="subscriptions" size={22} color={'grey'}
+        // />},
         {id:8, label:'Support', to:'support', icon:<MaterialIcon name="headset-mic" size={22} color={'grey'}
      /> },
     ]
@@ -71,6 +72,14 @@ export default function CustomDrawerList({navigation}) {
         navigation.navigate(to)
         // props.setSelected(props.id)
     }
+
+    const handleDropdown=(id)=>{
+        
+        setSelected(id)
+        setshowDropdown(!showDropdown)
+    }
+
+
   return (
         <SafeAreaView style={{flex:1}}>
             
@@ -87,7 +96,7 @@ export default function CustomDrawerList({navigation}) {
                       <Text style={tw`py-1 text-base font-bold`}>Rasheed Johnson</Text>
                       <Text style={tw`py-0.5`}> {currentPlatform} Platform</Text>
                     </Pressable>
-                    <Pressable  onPress={()=>setshowPlaform(!showPlatforms)} style={tw`bg-green-900 px-2 flex-row rounded-full mt-1 py-1`}>
+                    <Pressable  onPress={()=>setshowPlaform(!showPlatforms)} style={[tw`px-2 flex-row rounded-full mt-1 py-1`,{backgroundColor:'#0092ED'}]}>
                         <MaterialCom color='white' style={tw`my-auto pr-2`} size={17} name='account-switch-outline'/>
                         <Text style={tw`text-center text-white text-xs`}>Switch Platform</Text>
                     </Pressable>
@@ -109,25 +118,28 @@ export default function CustomDrawerList({navigation}) {
                     label={e.label}
                     navigation={navigation}
                     id={e.id}
+                    // selected={selected}
                     to={e.to}
                     setSelected={setSelected}
                     selected={selected}
-                    bg={selected == e.id ?'bg-green-200':''}
+                    bg={selected == e.id ?'bg-blue-200':''}
                     icon={e.icon}
+                    key={e.id}
                 />)}
             
             
-            <Pressable onPress={()=>setshowDropdown(!showDropdown)} style={tw`my-4 flex-row mx-5`}>
+            <Pressable onPress={()=>handleDropdown(20)} style={tw`my-4 flex-row mx-5 ${selected==20 ? 'bg-blue-200 pl-4 rounded-lg py-2' :''}`}>
                 <Ionicon name='ios-file-tray-full' style={tw`mr-8 my-auto text-gray-500`} size={22} />
-                <Text style={tw`text-gray-500`}>Resources</Text>
+                <Text style={{color:20==selected  ? '#0092ED' : 'rgba(0,0,0,0.4)' }}>Resources</Text>
             </Pressable>
             { showDropdown ? options.map(e=>
-            <Pressable key={e.id} onPress={()=>handleSub(e.to)} style={tw`w-full ml-12 my-1`}>
-                <Text style={tw`text-gray-600`}>{e.label}</Text>
+            <Pressable key={e.id} onPress={()=>handleSub(e.to)} style={tw`w-full ml-12 pl-5 my-1`}>
+                <Text style={tw`text-gray-500`}>{e.label}</Text>
             </Pressable>):<></>}
 
             { drawerData2.map(e=>
             <DrawerButton
+                key={e.id}
                 label={e.label}
                 navigation={navigation}
                 id={e.id}s
@@ -139,8 +151,8 @@ export default function CustomDrawerList({navigation}) {
             />)}
             
             <Pressable onPress={()=>setVisible(true)} style={tw`my-4 flex-row mx-5`}>
-                <MaterialIcon name='logout' style={tw`mr-8 my-auto text-gray-500`} size={22} />
-                <Text>Logout</Text>
+                <MaterialIcon name='logout' style={tw`mr-8 my-auto text-gray-400`} size={22} />
+                <Text style={tw`text-gray-400`}>Logout</Text>
             </Pressable>
             </ScrollView>
         </SafeAreaView>

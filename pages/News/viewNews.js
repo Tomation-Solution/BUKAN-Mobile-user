@@ -16,7 +16,7 @@ const ViewNews = ({navigation}) => {
           <View style={tw`flex-row pb-1 justify-between px-3`}>
             <Ionicon name='ios-chevron-back' onPress={()=>navigation.goBack()} size={30}/>
             <Text style={tw`my-auto font-bold text-base`}>News</Text>
-            <Ionicon name='md-notifications' onPress={()=>navigation.navigate('notifications')} style={tw`text-green-800`} size={30}/>
+            <Ionicon name='md-notifications' onPress={()=>navigation.navigate('notifications')} color='#0092ED' size={30}/>
           </View>
         }
         />
@@ -29,7 +29,7 @@ const ViewNews = ({navigation}) => {
             source={require('../../images/onboarding/phone.png')}/>
         </View>
         <View style={tw`px-4 py-2`}>
-            <Text style={tw`text-base font-bold text-green-800 py-1`}>24th Annual Anniversary Celebration</Text>
+            <Text style={[tw`text-base font-bold text-green-800 py-1`,{color:"#0092ED"}]}>24th Annual Anniversary Celebration</Text>
             <Text style={tw`text-justify text-gray-800 py-1`}>
             Lorem ipsum dolor sit amet, consectetur adipiscing 
             elit. Et lacus lacus, proin proin egestas. Augue 
@@ -42,13 +42,13 @@ const ViewNews = ({navigation}) => {
 
         <View style={tw`border-t border-b flex-row justify-around border-gray-500 py-2`}>
           <View style={tw`flex-row pl-5`}>
-            <MaterialIcon name='thumb-up-off-alt' color='#365C2A' size={23}/>
+            <MaterialIcon name='thumb-up-off-alt' color='#0092ED' size={23}/>
             <Text style={tw`my-auto px-2`}>Like</Text>
           </View>
 
           <View style={tw`flex-row px-5`}>
-            <FontAwesome name='commenting-o' color='#365C2A' size={23}/>
-            <Text style={tw`my-auto px-2`}>Like</Text>
+            <FontAwesome name='commenting-o' color='#0092ED' size={23}/>
+            <Text style={tw`my-auto px-2`}>Comment</Text>
           </View>
 
           
@@ -60,7 +60,7 @@ const ViewNews = ({navigation}) => {
         </View>
 
         {/* //View More */}
-        <Text style={tw`text-green-800 font-bold`}>View 3 More Comments</Text>
+        <Text style={[tw`font-bold`, {color:'#0092ED'}]}>View 3 More Comments</Text>
         </View>  
         <View>
           <WriteCommentCard/>

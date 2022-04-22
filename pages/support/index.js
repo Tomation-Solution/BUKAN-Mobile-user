@@ -7,6 +7,7 @@ import TobBar from '../../components/topBar';
 import SupportCard from '../../components/support/SupportCard';
 import ModalTemplate from '../../components/Modal';
 import SupportChat from '../../components/support/SupportChat';
+import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
 export default function Support({navigation}) {
     const [visible, setVisible] = useState(false)
@@ -35,7 +36,7 @@ export default function Support({navigation}) {
                 <View style={tw`flex-row justify-between px-3`}>
                     <Ionicon name='ios-chevron-back' onPress={()=>navigation.goBack()} size={30}/>
                     <Text style={tw`my-auto font-bold text-base`}>Support</Text>
-                    <Ionicon name='md-notifications' onPress={()=>navigation.navigate('notifications')} style={tw`text-green-800`} size={30}/>
+                    <Ionicon name='md-notifications' onPress={()=>navigation.navigate('notifications')} color='#0092ED' size={30}/>
                 </View>
             }
         />
@@ -52,7 +53,7 @@ export default function Support({navigation}) {
         //     <SupportCard title={e.title} body={e.body} id={1}/>
         // )}
         />
-        <Pressable onPress={()=>setVisible(true)} style={tw`h-14 shadow-lg w-14 bg-green-800 absolute bottom-10 right-6 rounded-full`}>
+        <Pressable onPress={()=>setVisible(true)} style={[tw`h-14 shadow-lg w-14 absolute bottom-10 right-6 rounded-full`, {backgroundColor:'#0092ED'}]}>
             <Ionicon name="ios-chatbox-ellipses" style={tw`m-auto`} size={22} color={'white'}/>
         </Pressable>
      </SafeAreaView>
