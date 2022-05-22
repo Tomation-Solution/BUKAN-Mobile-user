@@ -18,14 +18,19 @@ export default function SplashScreen({navigation}) {
     },[])
   return (
     <View style={tw` h-full`}>
-      <Image style={tw`h-24 m-auto`} resizeMode='contain' source={require('../images/Logo/AANI-Splash.png')}/>  
+      <Image style={tw`h-24 m-auto`} resizeMode='contain' source={require('../images/Logo/Buk.jpg')}/>  
       {/* <Text>SplashScreen</Text> */}
-      <View style={tw`mx-auto mb-5`}>
       { !load  ?
+      <View style={tw`mx-auto mb-5`}>
+      
         <ActivityIndicator style={tw`absolute bottom-0`} size={30} color='#365C2A' />
-        : <RoundedButton text='Next' pressed={()=>navigation.navigate('home')}/>
-      }
+        
       </View>
+      : 
+      <View style={tw`w-7/12 mx-auto mb-5`}>
+      <RoundedButton text='Next' pressed={()=>navigation.navigate('home')}/>
+      </View>
+      }
     </View>
   )
 }

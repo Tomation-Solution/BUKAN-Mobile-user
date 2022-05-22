@@ -17,14 +17,14 @@ const Onboarding = (props) => {
             </View> */}
             
             <View style={tw`flex mx-auto pb-1 px-7 `}>
-                <Text style={tw`flex mx-auto py-2 text-lg font-bold text-green-800`}>{props.title}</Text>
+                <Text style={[tw`flex mx-auto py-2 text-lg font-bold`,{color:'#0092ED'}]}>{props.title}</Text>
                 <Text style={tw`flex mx-auto py-2 text-center text-gray-700`}>{props.body}</Text>
             </View>
 
             <View style={tw`flex-row mx-auto py-5`}>
-                <Pressable onPress={()=>props.navigation('first')} style={tw`h-2 ${props.next=='second'?'w-5':'w-2'} rounded-full ${props.next =='second'? 'bg-green-800':'bg-gray-400'} mx-1`}></Pressable>
-                <Pressable style={tw`h-2 ${props.next=='third'?'w-5':'w-2'} rounded-full ${props.next =='third'? 'bg-green-800':'bg-gray-400'} mx-1`}></Pressable>
-                <Pressable style={tw`h-2 ${props.next=='login'?'w-5':'w-2'} rounded-full ${props.next =='login'? 'bg-green-800':'bg-gray-400'} mx-1`}></Pressable>
+                <Pressable onPress={()=>props.navigation('first')} style={[tw`h-2 ${props.next=='second'?'w-5':'w-2'} rounded-full ${props.next =='second'? '':'bg-gray-400'} mx-1`,{backgroundColor:props.next!='second'?'rgba(0,0,0,0.3)':'#0092ED'}]}></Pressable>
+                <Pressable style={[tw`h-2 ${props.next=='third'?'w-5':'w-2'} rounded-full ${props.next =='third'? '':'bg-gray-400'} mx-1`,{backgroundColor:props.next!='third'?'rgba(0,0,0,0.3)':'#0092ED'}]}></Pressable>
+                <Pressable style={[tw`h-2 ${props.next=='chapters'?'w-5':'w-2'} rounded-full ${props.next =='chapters'? '':'bg-gray-400'} mx-1`,{backgroundColor:props.next!='chapters'?'rgba(0,0,0,0.3)':'#0092ED'}]}></Pressable>
             </View>
 
             <View style={tw` absolute bottom-0 px-3 w-full`}>
@@ -33,7 +33,7 @@ const Onboarding = (props) => {
                         <Text>Skip</Text>
                     </TouchableOpacity>
                     <View style={tw`my-auto`}>
-                        <Ionicon onPress={()=>props.navigation.navigate(props.next)} name='ios-arrow-forward-circle' size={38} color='#365C2A' />
+                        <Ionicon onPress={()=>props.navigation.navigate(props.next)} name='ios-arrow-forward-circle' size={38} color='#0092DE' />
                     </View>
                 </View>
             </View>

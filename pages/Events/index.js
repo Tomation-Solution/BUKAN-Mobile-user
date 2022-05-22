@@ -31,11 +31,11 @@ const Events = ({navigation}) => {
           <View style={tw`flex-row justify-between px-3`}>
             <Ionicon name='ios-chevron-back' onPress={()=>navigation.goBack()} size={30}/>
             <Text style={tw`my-auto font-bold text-base`}>Events</Text>
-            <Ionicon name='md-notifications' onPress={()=>navigation.navigate('notifications')} style={tw`text-green-800`} size={30}/>
+            <Ionicon name='md-notifications' onPress={()=>navigation.navigate('notifications')} color='#0092ED' size={30}/>
           </View>
         }
         />
-      <View style={tw`flex-row justify-between bg-green-100 my-3 rounded-lg py-2 mx-4 px-2`}> 
+      <View style={tw`flex-row justify-between bg-blue-100 my-3 rounded-lg py-2 mx-4 px-2`}> 
         <Ionicon name='ios-search' size={25} style={tw`mr-2`} />
         <TextInput
           placeholder='Search by date'

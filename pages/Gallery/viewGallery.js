@@ -26,8 +26,8 @@ const ViewGallery = ({navigation, route}) => {
             }
         </View>
         <View style={tw`px-4 py-2`}>
-            <Text style={tw`text-base font-bold text-green-800 py-1`}>Monthly Exco Meeting</Text>
-            <Text style={tw`text-justify text-green-800 py-1`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et lacus lacus, proin proin egestas. Augue scelerisque pellentesque nullam montes, pretium. Nisl, in netus Et l</Text>
+            <Text style={[tw`text-base font-bold py-1`,{color:'#0092ED'}]}>Monthly Exco Meeting</Text>
+            <Text style={tw`text-justify text-gray-600 py-1`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et lacus lacus, proin proin egestas. Augue scelerisque pellentesque nullam montes, pretium. Nisl, in netus Et l</Text>
         </View>  
       
     </View>

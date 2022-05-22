@@ -44,7 +44,7 @@ const Login = ({navigation, route}) => {
   return (
     <SafeAreaView >
       {/* <ModalTemplate body={<OwingWidget/>} /> */}
-      <Image style={tw`mx-auto my-8`} source={require('../images/Logo/ANNILogo.png')}/>
+      <Image style={tw`mx-auto my-8 h-14 w-14`} resizeMode='contain' source={require('../images/Logo/Buk.jpg')}/>
       <View style={tw`mx-10`}>
          <Text style={tw`text-base font-bold`}>{route.params ? route.params.state  + ' Chapter ':''}Login</Text>
           <Text>Input details to register</Text>
@@ -81,7 +81,7 @@ const Login = ({navigation, route}) => {
           <View style={tw`flex-row mx-auto py-4`}>
               <Text>Don't have an Account?</Text>
               <TouchableOpacity onPress={()=>navigation.navigate('register')}>
-                <Text style={[tw`font-bold`, {color:'#365C2A'}]}> Register</Text>
+                <Text style={[tw`font-bold`, {color:'#0092ED'}]}> Register</Text>
               </TouchableOpacity>
           </View>
       </View>

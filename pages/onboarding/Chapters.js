@@ -16,13 +16,13 @@ export default function Chapters({navigation}) {
     ]
   return (
     <View style={tw`h-full`}>
-        <View style={tw`m-auto w-8/12 `}>
-            <Text style={tw`text-lg text-center text-green-800 font-bold `}>Welcome to Alumni Assocation of National Institute</Text>  
+        <View style={tw`m-auto w-10/12 `}>
+            <Text style={[tw`text-lg text-center  font-bold `,{color:'#0092ED'}]}>Welcome to Bayero University Alumni Association of Nigeria (BUKAAN)</Text>  
 
-            <View style={tw`mx-auto my-2 px-3 flex-row py-2 bg-green-800 rounded-lg`}>
+            <Pressable onPress={()=>navigation.navigate('login')} style={[tw`mx-auto my-2 px-3 flex-row py-2 rounded-lg`,{backgroundColor:'#0092ED'}]}>
                 <Text style={tw`text-white`}>Continue to National Platform  </Text>
                 <Ionicon name='md-arrow-forward-circle' style={tw`my-auto`} size={22} color='white'/>
-            </View>
+            </Pressable>
             <Text style={tw`mx-auto text-base`}>OR</Text>
             
             

@@ -9,7 +9,7 @@ const ChatsCard = (props) => {
         
       <View style={[tw`flex-row`, {maxWidth:'85%', }]}> 
           
-          <View style={[tw`bg-white py-2 px-4  rounded-xl `,{backgroundColor:'#365C2A'}]}>
+          <View style={[tw`bg-white py-2 px-4  rounded-xl `,{backgroundColor:'#0092ED'}]}>
               <Text style={tw`text-xs font-bold text-white`}>{props.message}</Text>
               <Text style={tw`text-xs text-gray-300 text-right`}>{props.time}</Text>
           </View>
