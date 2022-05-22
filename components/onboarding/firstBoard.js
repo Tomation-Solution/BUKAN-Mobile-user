@@ -9,7 +9,7 @@ const FirstBoard = ({navigation}) => {
     <View>
       <Onboarding
         image={require('../../images/onboarding/guy.png')}
-        title='Welcome to AANI'
+        title='Welcome to BUKAAN'
         body='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet consequat pellentesque eget nisl. Amet consequat pellentesque eget nLorem ipsum dolor sit amet, consectetur adipiscing elit. Amet consequat pellentesque eget nisl. Amet consequat pellentesque eget n'
         navigation= {navigation}
         next={'second'}

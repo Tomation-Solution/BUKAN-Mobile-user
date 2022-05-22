@@ -17,7 +17,7 @@ const NewsCard = (props) => {
             <Ionicon name='ios-heart-outline' color='#fff' onPress={()=>setIsLiked(!isLiked)} size={22}/>}
         </View>
         <Text style={tw`font-bold`}>{props.head}</Text>
-        <Text style={tw`text-justify text-xs`}>{props.body < 50 ? props.body : props.body.substr(0,49)+'...'}</Text>
+        <Text style={tw`text-justify text-xs text-gray-600`}>{props.body < 50 ? props.body : props.body.substr(0,49)+'...'}</Text>
         
     </Pressable>
   )

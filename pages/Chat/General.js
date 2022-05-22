@@ -16,7 +16,7 @@ const General = () => {
       ]
   return (
     <View style={tw`h-full`}>
-      <KeyboardAvoidingView behavior='height' style={tw`flex bg-green-50 rounded-lg mx-3 h-full justify-end `}>
+      <KeyboardAvoidingView behavior='height' style={tw`flex rounded-lg mx-3 h-full justify-end `}>
         <FlatList
             data={data}
             keyExtractor={ (item, index) => item.id }

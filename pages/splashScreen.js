@@ -13,10 +13,10 @@ export default function SplashScreen({navigation}) {
     },[])
   return (
     <View style={tw` h-full`}>
-      <Image style={tw`h-24 m-auto`} resizeMode='contain' source={require('../images/Logo/AANI-Splash.png')}/>  
+      <Image style={tw`h-24 m-auto`} resizeMode='contain' source={require('../images/Logo/Buk.jpg')}/>  
       {/* <Text>SplashScreen</Text> */}
       <View style={tw`mx-auto mb-5`}>
-        <ActivityIndicator style={tw`absolute bottom-0`} size={30} color='#365C2A' />
+        <ActivityIndicator style={tw`absolute bottom-0`} size={30} color='#0092DE' />
       </View>
     </View>
   )

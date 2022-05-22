@@ -19,7 +19,7 @@ export default function SupportCard(props) {
                 <Text style={tw`my-auto font-bold pb-1`}>{props.title}</Text>
             </Pressable>
             { !isChecked == props.id ?
-            <Ionicon onPress={()=>handlePress(props.id)} name='ios-add-circle-outline' color='green' size={22}/>
+            <Ionicon onPress={()=>handlePress(props.id)} name='ios-add-circle-outline' color='#0092ED' size={22}/>
             :
             <Ionicon onPress={()=>setisChecked(0)} name='ios-remove-circle-outline' color='red' size={22}/>
             }

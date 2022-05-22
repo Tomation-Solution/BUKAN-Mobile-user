@@ -18,7 +18,7 @@ const ExcoCard = (props) => {
         </View> */}
         <Text style={tw`font-bold text-base pt-2`}>{props.head}</Text>
         <Text style={tw`font-bold text-center text-gray-500 py-1`}>portfolio - {props.portfolio}</Text>
-        <Text style={tw`font-bold pb-1`} numberOfLines={1}>{props.company}</Text>
+        <Text style={[tw`font-bold pb-1`,{color:'#0092ED'}]} numberOfLines={1}>{props.company}</Text>
         <Text style={tw`text-justify text-xs`}>{props.body < 50 ? props.body : props.body.substr(0,49)+'...'}</Text>
         
     </Pressable>

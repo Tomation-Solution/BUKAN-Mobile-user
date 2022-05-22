@@ -33,7 +33,7 @@ const ViewEvent = () => {
         </View>
         
         <View style={tw`px-4 py-2`}>
-            <Text style={tw`text-base font-bold text-green-800 py-1`}>24th Annual Anniversary Celebration</Text>
+            <Text style={[tw`text-base font-bold  py-1`,{color:'#0092ED'}]}>24th Annual Anniversary Celebration</Text>
             
           <View style={tw`border-t border-b border-gray-500 my-2 py-2`}>
             <View style={tw`flex-row`}> 
@@ -54,7 +54,7 @@ const ViewEvent = () => {
             <Text style={tw`text-justify text-gray-400 py-1`}>5 Likes</Text>
 
         <View style={tw`border-t border-b border-gray-500 py-2`}>
-          <Text style={tw`text-green-800 font-bold`}>Details</Text>
+          <Text style={[tw`font-bold`,{color:'#0092ED'}]}>Details</Text>
 
           <Text style={tw`text-justify text-gray-800 py-1`}>
             Lorem ipsum dolor sit amet, consectetur adipiscing 
@@ -69,7 +69,7 @@ const ViewEvent = () => {
        
 
         {/* //View More */}
-        <Text style={tw`text-green-800 pt-2 font-bold`}>Gate Fee</Text>
+        <Text style={[tw`text-green-800 pt-2 font-bold`, {color:'#0092ED'}]}>Gate Fee</Text>
         <Text style={tw`text-black font-bold`}>N5,000</Text>
         
         {/* Regiser Button */}
