@@ -4,6 +4,8 @@ import tw from 'tailwind-react-native-classnames'
 import RoundedButton from '../components/button/RoundedButton'
 
 
+import RoundedButton from '../components/button/RoundedButton'
+
 export default function SplashScreen({navigation}) {
 
   const [load, setLoad] = useState(false)
@@ -14,12 +16,14 @@ export default function SplashScreen({navigation}) {
             //  setisChecked(id)
             setLoad(true)
             navigation.navigate('home')
+            setLoad(true)
             }, 200);
     },[])
   return (
     <View style={tw` h-full`}>
       <Image style={tw`h-24 m-auto`} resizeMode='contain' source={require('../images/Logo/Buk.jpg')}/>  
       {/* <Text>SplashScreen</Text> */}
+
       { !load  ?
       <View style={tw`mx-auto mb-5`}>
       
